@@ -13,7 +13,7 @@ function Ciudad({ onFilter }) {
             src={`http://openweathermap.org/img/wn/${city.img}@2x.png`}
             alt="clima"
           />
-          <span>
+          <span className={styles.info}>
             <p>
               <b>Temperatura:</b> {city.temp}
             </p>

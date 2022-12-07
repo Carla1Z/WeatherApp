@@ -6,7 +6,7 @@
 }
 
 .card {
-  width: 350px;
+  width: 400px;
   height: auto;
   padding: 20px;
   border-radius: 50px;
@@ -20,6 +20,12 @@
 .detail {
   display: flex;
   align-items: center;
+}
+
+.info p{
+    border-bottom: solid 1.5px rgba(255, 255, 255, 0.596);
+    border-left: solid 1px rgba(255, 255, 255, 0.596);
+    padding: 4px;
 }
 
 .btn {
