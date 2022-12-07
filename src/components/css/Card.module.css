@@ -1,0 +1,31 @@
+.card {
+  width: 190px;
+  height: 254px;
+  padding: 10px;
+  background: linear-gradient(135deg, #ebadb6 0%, #aceae1 100%);
+  border-radius: 7px;
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+}
+
+.closeButton{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.close {
+    background-color: grey;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.close:hover{
+    background-color: white;
+    color: grey;
+}
+
+.info {
+  display: flex;
+}

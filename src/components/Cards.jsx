@@ -1,8 +1,9 @@
 import Card from "./Card";
+import styles from "./css/Cards.module.css"
 
 function Cards({ cities, onClose }) {
   return (
-    <div>
+    <div className={styles.cards}>
       {cities ? (
         cities.map((city) => (
           <Card

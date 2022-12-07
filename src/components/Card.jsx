@@ -1,17 +1,29 @@
+import styles from "./css/Card.module.css";
+
 function Card({ name, min, max, onClose, img, id }) {
   return (
-    <div>
-      <button onClick={() => onClose(id)}>X</button>
-      <h3>{name}</h3>
-      <div>
-        <p>Min</p>
-        <p>{min}</p>
-        <p>Max</p>
-        <p>{max}</p>
-        <img
-          src={`http://openweathermap.org/img/wn/${img}@2x.png`}
-          alt="clima"
-        />
+    <div className={styles.card}>
+      <span className={styles.closeButton}>
+        <button onClick={() => onClose(id)} className={styles.close}>
+          X
+        </button>
+      </span>
+      <div className={styles.city}>
+        <h3>{name}</h3>
+        <div className={styles.info}>
+          <span>
+            <h4>Min</h4>
+            <p>{min}</p>
+          </span>
+          <span>
+            <h4>Max</h4>
+            <p>{max}</p>
+          </span>
+          <img
+            src={`http://openweathermap.org/img/wn/${img}@2x.png`}
+            alt="clima"
+          />
+        </div>
       </div>
     </div>
   );
