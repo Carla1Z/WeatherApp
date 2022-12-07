@@ -15,7 +15,7 @@ function Ciudad({ onFilter }) {
           />
           <span className={styles.info}>
             <p>
-              <b>Temperatura:</b> {city.temp}
+              <b>Temperatura:</b> {city.temp}°C
             </p>
             <p>
               <b>Clima:</b> {city.weather}
