@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styles from "./css/Card.module.css";
 
 function Card({ name, min, max, onClose, img, id }) {
@@ -9,7 +10,9 @@ function Card({ name, min, max, onClose, img, id }) {
         </button>
       </span>
       <div className={styles.city}>
+        <Link to={`/ciudad/${id}`}>
         <h3>{name}</h3>
+        </Link>
         <div className={styles.info}>
           <span>
             <h4>Min</h4>

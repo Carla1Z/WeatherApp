@@ -1,18 +1,21 @@
 import "./App.css";
 import Nav from "./components/Nav";
 import Cards from "./components/Cards";
+import Ciudad from "./components/Ciudad";
 import { useState } from "react";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
   const REACT_APP_API_KEY = process.env.REACT_APP_API_KEY;
-  // console.log("apikey= " + REACT_APP_API_KEY);
+  console.log("apikey= " + REACT_APP_API_KEY);
 
   const [cities, setCities] = useState([]);
 
   function onSearch(cityName) {
     console.log("cityName=" + cityName);
     fetch(
-      `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${REACT_APP_API_KEY}&units=metric`
+      // `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${REACT_APP_API_KEY}&units=metric`
+      `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=4ae2636d8dfbdc3044bede63951a019b&units=metric`
     )
       .then((e) => e.json())
       .then((city) => {
@@ -39,6 +42,15 @@ function App() {
 
   function onClose(id) {
     setCities((oldCities) => oldCities.filter((c) => c.id !== id));
+  }
+
+  function onFilter(ciudadId) {
+    let ciudad = cities.filter((c) => c.id === parseInt(ciudadId));
+    if (ciudad.length > 0) {
+      return ciudad[0];
+    } else {
+      return null;
+    }
   }
 
   return (
