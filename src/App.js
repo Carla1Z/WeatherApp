@@ -7,15 +7,13 @@ import { Route, Routes } from "react-router-dom";
 
 function App() {
   const REACT_APP_API_KEY = process.env.REACT_APP_API_KEY;
-  console.log("apikey= " + REACT_APP_API_KEY);
 
   const [cities, setCities] = useState([]);
 
   function onSearch(cityName) {
     console.log("cityName=" + cityName);
     fetch(
-      // `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${REACT_APP_API_KEY}&units=metric`
-      `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=4ae2636d8dfbdc3044bede63951a019b&units=metric`
+      `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${REACT_APP_API_KEY}&units=metric`
     )
       .then((e) => e.json())
       .then((city) => {
