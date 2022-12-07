@@ -15,19 +15,6 @@ function Ciudad({ onFilter }) {
             <p>Latitud: {city.latitud}º</p>
             <p>Longitud: {city.longitud}º</p>
         </span>
-      {/* <div className={styles.cityContainer}>
-        <div className={styles.cityContainer2}>
-          <h2 className={styles.titleCity}>{city.name}</h2>
-          <div className={styles.info}>
-            <div>Temperatura: {city.temp} ºC</div>
-            <div>Clima: {city.weather}</div>
-            <div>Viento: {city.wind} km/h</div>
-            <div>Cantidad de nubes: {city.clouds}</div>
-            <div>Latitud: {city.latitud}º</div>
-            <div>Longitud: {city.longitud}º</div>
-          </div>
-        </div>
-      </div> */}
     </div>
   );
 }
