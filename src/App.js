@@ -1,9 +1,9 @@
 import "./App.css";
+import { Route, Routes } from "react-router-dom";
 import Nav from "./components/Nav";
 import Cards from "./components/Cards";
 import Ciudad from "./components/Ciudad";
 import { useState } from "react";
-import { Route, Routes } from "react-router-dom";
 
 function App() {
   const REACT_APP_API_KEY = process.env.REACT_APP_API_KEY;
@@ -50,11 +50,21 @@ function App() {
       return null;
     }
   }
-
   return (
     <div>
       <Nav onSearch={onSearch} />
-      <Cards cities={cities} onClose={onClose} />
+      <Routes>
+        <Route
+          exact
+          path="/"
+          element={<Cards cities={cities} onClose={onClose} />}
+        />
+        <Route
+          exact
+          path="/ciudad/:id"
+          element={<Ciudad onFilter={onFilter} />}
+        />
+      </Routes>
     </div>
   );
 }
