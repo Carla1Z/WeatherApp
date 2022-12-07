@@ -13,11 +13,11 @@ function Card({ name, min, max, onClose, img, id }) {
         <div className={styles.info}>
           <span>
             <h4>Min</h4>
-            <p>{min}</p>
+            <p>{min}°C</p>
           </span>
           <span>
             <h4>Max</h4>
-            <p>{max}</p>
+            <p>{max}°C</p>
           </span>
           <img
             src={`http://openweathermap.org/img/wn/${img}@2x.png`}
