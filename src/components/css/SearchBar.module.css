@@ -1,0 +1,36 @@
+.input {
+  display: flex;
+  align-items: center;
+}
+
+.text {
+  min-height: 30px;
+  /* max-width: 150px; */
+  padding: 0 1rem;
+  color: #fff;
+  font-size: 15px;
+  border: 1px solid #5e4dcd;
+  border-radius: 6px 0 0 6px;
+  background-color: transparent;
+}
+
+.text:focus, .text:focus-visible {
+    border-color: #3898EC;
+    outline: none;
+  }
+
+.submit {
+  min-height: 30px;
+  padding: 0.5em 1em;
+  border: none;
+  border-radius: 0 6px 6px 0;
+  background-color: #5e4dcd;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.submit:hover{
+    background-color: #5e5dcd;
+}
