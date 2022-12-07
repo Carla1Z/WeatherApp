@@ -9,7 +9,7 @@
   background-color: #ffc8dd;
 }
 
-.nav img {
+.icono {
   width: 50px;
   height: 50px;
   background-color: rgba(240, 248, 255, 0.459);
@@ -23,13 +23,19 @@
 }
 
 @media (max-width: 520px) {
-  img {
+  .icono {
     display: none;
   }
 }
 
 @media (max-width: 480px) {
-  .name{
+  .name {
     display: none;
+  }
+  .nav {
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    padding-top: 5px;
   }
 }
