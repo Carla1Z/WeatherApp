@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import styles from "./css/Ciudad.module.css";
 
 function Ciudad({ onFilter }) {
@@ -34,6 +34,9 @@ function Ciudad({ onFilter }) {
             </p>
           </span>
         </figure>
+        <Link to="/">
+          <button className={styles.btn}>Volver</button>
+        </Link>
       </div>
     </div>
   );
