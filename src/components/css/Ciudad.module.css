@@ -1,3 +1,20 @@
-.ciudad{
-    background-color: antiquewhite;
+.ciudad {
+  /* background-color: red; */
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.card {
+  width: 350px;
+  height: auto;
+  padding: 20px;
+  border-radius: 50px;
+  background: #e0e0e0;
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+}
+
+.detail{
+    display: flex;
+    align-items: center;
 }
